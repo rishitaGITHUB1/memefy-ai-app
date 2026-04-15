@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MemefyAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/accent_blue</item>
+        <item name="colorPrimaryVariant">@color/accent_purple</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/accent_pink</item>
+        <item name="colorSecondaryVariant">@color/gradient_end</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/primary_dark</item>
+    </style>
+
+    <!-- BottomSheet Dialog Theme - matches MaterialComponents -->
+    <style name="BottomSheetDialogTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_rounded</item>
+    </style>
+
+</resources>

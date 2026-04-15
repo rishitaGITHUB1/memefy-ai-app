@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_dark">
+
+    <!-- Top Nav -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_rocket"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MEMEFY-AI"
+            android:textColor="@color/accent_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/pink_glow_border"
+                android:padding="28dp">
+
+                <!-- Welcome Back -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back!"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="6dp">
+                    <requestFocus />
+                </TextView>
+
+                <!-- Gradient text trick: two TextViews inline -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome "
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="#C850C0"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ready to create some viral content?"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Login / Sign Up Tab Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/card_normal_border"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:id="@+id/tab_login"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Login"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF6B9D"
+                        android:background="@drawable/card_normal_border"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/tab_signup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Sign Up"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <!-- EMAIL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMAIL ADDRESS"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.12"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="email@example.com"
+                    android:background="@drawable/card_normal_border"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- PASSWORD -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PASSWORD"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.12"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="••••••••"
+                    android:background="@drawable/card_normal_border"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Login Now Button -->
+                <Button
+                    android:id="@+id/btn_login_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Login Now 👋"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/gradient_button"
+                    android:textAllCaps="false"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- OR CONTINUE WITH divider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <View android:layout_width="0dp" android:layout_height="1dp"
+                        android:layout_weight="1" android:background="#3a3f55" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  OR CONTINUE WITH  "
+                        android:textSize="11sp"
+                        android:letterSpacing="0.1"
+                        android:textColor="@color/text_secondary" />
+                    <View android:layout_width="0dp" android:layout_height="1dp"
+                        android:layout_weight="1" android:background="#3a3f55" />
+                </LinearLayout>
+
+                <!-- Google Account Button -->
+                <LinearLayout
+                    android:id="@+id/btn_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- Colorful G -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#4285F4"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Google Account"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222" />
+                </LinearLayout>
+
+                <!-- Terms -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By continuing, you agree that memes are life 🔥"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav (not logged in: 4 items, Login active) -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_nav_bg"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical"
+        android:weightSum="4">
+
+        <LinearLayout android:id="@+id/nav_home_btn"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_home" android:contentDescription="Home" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_create_btn"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_generator" android:contentDescription="Create" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_gallery_btn"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_gallery" android:contentDescription="Gallery" />
+        </LinearLayout>
+
+        <!-- Login active pill -->
+        <LinearLayout android:id="@+id/nav_login_btn"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:orientation="horizontal" android:gravity="center"
+            android:background="@drawable/bottom_nav_active"
+            android:paddingHorizontal="10dp"
+            android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_logout" android:contentDescription="Login"
+                android:layout_marginEnd="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Login" android:textColor="#FFFFFF" android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memefy AI</string>
+    <string name="login">Login</string>
+    <string name="start_creating">Start Creating Memes</string>
+    <string name="demo_mode">Try Demo Mode</string>
+    <string name="home">Home</string>
+    <string name="generator">Generator</string>
+    <string name="gallery">Gallery</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <string name="viral_content">No cap, just pure viral content!</string>
+    <string name="tagline">The ultimate AI meme generator for Gen-Z creators.</string>
+</resources>
